@@ -34,11 +34,11 @@ export const paymentVerification = async (req, res) => {
             razorpay_payment_id, 
             razorpay_signature
         })
-        res.redirect(`http://localhost:3001/paymentsucess?reference=${razorpay_payment_id}`)
+        res.redirect(`https://payment-gateway-api-iota.vercel.app/paymentsucess?reference=${razorpay_payment_id}`)
       
     }
     else{
-         console.log("lkjh")
+        //  console.log("lkjh")
         res.status(500).json({ sucess: false });
     }
 };
