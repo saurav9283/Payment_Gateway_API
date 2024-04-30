@@ -4,7 +4,10 @@ import dotenv from "dotenv";
 import paymentRouter from "./routes/paymentRouter.js";
 export const app = express();
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: '*'
+  }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 dotenv.config();
